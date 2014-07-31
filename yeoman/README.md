@@ -29,3 +29,23 @@ bower list
 #安装项目所有的依赖
 bower install
 ```
+#Build
+##clean task
+```javascript
+clean: {
+    dist: {
+        files: [{
+            dot: true,
+            src: ['.tmp', '<%= yeoman.dist %>/*', '!<%= yeoman.dist %>/.git*']
+        }]
+    },
+    server: '.tmp'
+}
+```
+###files
++ `filter` src里的路径通过任意一个有效的 fs.Stats 函数名或者一个函数通过返回true和false决定是否匹配
++ `nonull` 当一个匹配没有找到时，返回包含这个模式的列表自身.当没有任何一个匹配时,返回一个空列表.结合grunt 的--verbore参数，这个选项可以帮助debug文件的路径问题.
++ `dot` 即使模式没有包含开始的`.`,dot匹配文件名时也会开始于`.`
++ `matchBase` 如果设置了, 模式在带有斜杠的文件名中,只会最后一个结尾的文件名,比如, a?b 只会匹配 /xyz/123/acb, 但不会匹配xyz/acb/123
++ `expand` 提供一个动态的 src-dest 文件映射, 细节请看 "Building the files object dynamically"
++ 其他的参数只在某些识别它的库中使用. 更多细节可以参考 node-glob 和 minimatch 文档
