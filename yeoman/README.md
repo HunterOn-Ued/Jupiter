@@ -126,7 +126,7 @@ autoprefixer: {
     }
 }
 ```
-##useminPrepare
+##useminPrepare task
 ```javascript
 useminPrepare: {
     html: '<%= yeoman.app %>/index.html',
@@ -141,6 +141,19 @@ useminPrepare: {
                 post: {}
             }
         }
+    }
+}
+```
+##ngmin
+```javascript
+ngmin: {
+    dist: {
+        files: [{
+            expand: true,
+            cwd: '.tmp/concat/scripts',
+            src: '*.js',
+            dest: '.tmp/concat/scripts'
+        }]
     }
 }
 ```
