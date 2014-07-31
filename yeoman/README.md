@@ -144,7 +144,7 @@ useminPrepare: {
     }
 }
 ```
-##ngmin
+##ngmin task
 ```javascript
 ngmin: {
     dist: {
