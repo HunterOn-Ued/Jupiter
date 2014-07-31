@@ -211,7 +211,7 @@ cdnify: {
     }
 }
 ```
-##cssmin
+##cssmin task
 ```javascript
 cssmin: {
     options: {
@@ -219,7 +219,7 @@ cssmin: {
     }
 }
 ```
-##rev
+##rev task
 ```javascript
 rev: {
     dist: {
@@ -233,7 +233,7 @@ rev: {
     }
 }
 ```
-##usemin
+##usemin task
 ```javascript
 usemin: {
     html: ['<%= yeoman.dist %>/{,*/}*.html', '<%= yeoman.dist %>/views/{,*/}*.html', ],
