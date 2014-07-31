@@ -110,6 +110,22 @@ compass: {
     }
 }
 ```
+##autoprefixer
+```javascript
+autoprefixer: {
+    options: {
+        browsers: ['last 1 version']
+    },
+    dist: {
+        files: [{
+            expand: true,
+            cwd: '.tmp/styles/',
+            src: '{,*/}*.css',
+            dest: '.tmp/styles/'
+        }]
+    }
+}
+```
 ##files
 + `filter` src里的路径通过任意一个有效的 fs.Stats 函数名或者一个函数通过返回true和false决定是否匹配
 + `nonull` 当一个匹配没有找到时，返回包含这个模式的列表自身.当没有任何一个匹配时,返回一个空列表.结合grunt 的--verbore参数，这个选项可以帮助debug文件的路径问题.
