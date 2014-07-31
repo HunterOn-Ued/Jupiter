@@ -110,7 +110,7 @@ compass: {
     }
 }
 ```
-##autoprefixer
+##autoprefixer task
 ```javascript
 autoprefixer: {
     options: {
