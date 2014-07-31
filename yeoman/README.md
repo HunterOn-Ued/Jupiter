@@ -157,6 +157,60 @@ ngmin: {
     }
 }
 ```
+##copy task
+```javascript
+copy: {
+    dist: {
+        files: [{
+            expand: true,
+            dot: true,
+            cwd: '<%= yeoman.app %>',
+            dest: '<%= yeoman.dist %>',
+            src: ['*.{ico,png,txt}', '.htaccess', '*.html', 'views/{,*/}*.html', 'images/{,*/}*.{webp}']
+        },
+        {
+            expand: true,
+            cwd: '.tmp/images',
+            dest: '<%= yeoman.dist %>/images',
+            src: ['generated/*']
+        },
+        {
+            expand: true,
+            cwd: '<%= yeoman.app %>/lib/',
+            src: '**',
+            dest: '<%= yeoman.dist %>/lib/',
+        }]
+    },
+    styles: {
+        expand: true,
+        cwd: '<%= yeoman.app %>/styles',
+        dest: '.tmp/styles/',
+        src: '{,*/}*.css'
+    }
+}
+```
+##cdnify task
+```javascript
+cdnify: {
+    someTarget: {
+        options: {
+            rewriter: function (url) {
+                if (url.indexOf('data:') === 0){
+                    return url; // leave data URIs untouched
+                }else{
+                    return url + '?12345'; // add query string to all other URLs
+                }
+            }
+        },
+        files: [{
+            expand: true,
+            cwd: 'app',
+            src: '**/*.{css,html}',
+            dest: 'dist'
+        }]
+    }
+}
+```
 ##files
 + `filter` src里的路径通过任意一个有效的 fs.Stats 函数名或者一个函数通过返回true和false决定是否匹配
 + `nonull` 当一个匹配没有找到时，返回包含这个模式的列表自身.当没有任何一个匹配时,返回一个空列表.结合grunt 的--verbore参数，这个选项可以帮助debug文件的路径问题.
