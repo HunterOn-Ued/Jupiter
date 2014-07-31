@@ -31,7 +31,9 @@ bower install
 ```
 #Build
 ##clean task
+[https://www.npmjs.org/package/grunt-contrib-clean](https://www.npmjs.org/package/grunt-contrib-clean)
 ```javascript
+//清理文件
 clean: {
     dist: {
         files: [{
@@ -43,7 +45,9 @@ clean: {
 }
 ```
 ##imagemin task
+[https://www.npmjs.org/package/grunt-contrib-imagemin](https://www.npmjs.org/package/grunt-contrib-imagemin)
 ```javascript
+//压缩图片
 imagemin: {
     dist: {
         files: [{
@@ -56,7 +60,9 @@ imagemin: {
 }
 ```
 ##htmlmin task
+[https://www.npmjs.org/package/grunt-contrib-htmlmin](https://www.npmjs.org/package/grunt-contrib-htmlmin)
 ```javascript
+//压缩图片
 htmlmin: {
     dist: {
         options: {
@@ -81,7 +87,9 @@ htmlmin: {
 }
 ```
 ##compass task
+[https://www.npmjs.org/package/grunt-compass](https://www.npmjs.org/package/grunt-compass)
 ```javascript
+//编译sass，scss
 compass: {
     options: {
         sassDir: '<%= yeoman.app %>/styles',
@@ -111,7 +119,9 @@ compass: {
 }
 ```
 ##autoprefixer task
+[https://www.npmjs.org/package/grunt-autoprefixer](https://www.npmjs.org/package/grunt-autoprefixer)
 ```javascript
+//自动根据指定的浏览器添加／变更css前缀
 autoprefixer: {
     options: {
         browsers: ['last 1 version']
@@ -127,7 +137,9 @@ autoprefixer: {
 }
 ```
 ##useminPrepare task
+[https://www.npmjs.org/package/grunt-usemin](https://www.npmjs.org/package/grunt-usemin)
 ```javascript
+//根据html中的标识自动合并压缩js和css
 useminPrepare: {
     html: '<%= yeoman.app %>/index.html',
     options: {
@@ -145,7 +157,9 @@ useminPrepare: {
 }
 ```
 ##ngmin task
+[https://www.npmjs.org/package/grunt-ngmin](https://www.npmjs.org/package/grunt-ngmin)
 ```javascript
+//angular js 预编译,修复可能导致压缩后错误的语法
 ngmin: {
     dist: {
         files: [{
@@ -190,7 +204,9 @@ copy: {
 }
 ```
 ##cdnify task
+[https://www.npmjs.org/package/grunt-cdnify](https://www.npmjs.org/package/grunt-cdnify)
 ```javascript
+//根据规则，替换前端资源路径到cdn路径
 cdnify: {
     someTarget: {
         options: {
@@ -220,7 +236,9 @@ cssmin: {
 }
 ```
 ##rev task
+[https://www.npmjs.org/package/grunt-rev](https://www.npmjs.org/package/grunt-rev)
 ```javascript
+//为静态资源文件添加版本
 rev: {
     dist: {
         files: {
@@ -234,7 +252,9 @@ rev: {
 }
 ```
 ##usemin task
+[https://github.com/yeoman/grunt-usemin](https://github.com/yeoman/grunt-usemin)
 ```javascript
+//替换html和css中版本化的资源文件路径
 usemin: {
     html: ['<%= yeoman.dist %>/{,*/}*.html', '<%= yeoman.dist %>/views/{,*/}*.html', ],
     css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
