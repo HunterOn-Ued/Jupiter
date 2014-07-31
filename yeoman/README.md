@@ -42,7 +42,7 @@ clean: {
     server: '.tmp'
 }
 ```
-##imagemin
+##imagemin task
 ```javascript
 imagemin: {
     dist: {
@@ -55,7 +55,7 @@ imagemin: {
     }
 }
 ```
-##htmlmin
+##htmlmin task
 ```javascript
 htmlmin: {
     dist: {
@@ -77,6 +77,36 @@ htmlmin: {
             src: ['*.html', 'views/{,*/}*.html'],
             dest: '<%= yeoman.dist %>'
         }]
+    }
+}
+```
+##compass task
+```javascript
+compass: {
+    options: {
+        sassDir: '<%= yeoman.app %>/styles',
+        cssDir: '.tmp/styles',
+        generatedImagesDir: '.tmp/images/generated',
+        imagesDir: '<%= yeoman.app %>/images',
+        javascriptsDir: '<%= yeoman.app %>/scripts',
+        fontsDir: '<%= yeoman.app %>/lib/flatlab/fonts',
+        importPath: '<%= yeoman.app %>/bower_components',
+        httpImagesPath: '/images',
+        httpGeneratedImagesPath: '/images/generated',
+        httpFontsPath: '/lib/flatlab/fonts',
+        relativeAssets: false,
+        assetCacheBuster: false,
+        raw: 'Sass::Script::Number.precision = 10\n'
+    },
+    dist: {
+        options: {
+            generatedImagesDir: '<%= yeoman.dist %>/images/generated'
+        }
+    },
+    server: {
+        options: {
+            debugInfo: true
+        }
     }
 }
 ```
