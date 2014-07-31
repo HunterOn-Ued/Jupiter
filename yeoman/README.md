@@ -42,7 +42,45 @@ clean: {
     server: '.tmp'
 }
 ```
-###files
+##imagemin
+```javascript
+imagemin: {
+    dist: {
+        files: [{
+            expand: true,
+            cwd: '<%= yeoman.app %>/images',
+            src: '{,*/}*.{png,jpg,jpeg,gif}',
+            dest: '<%= yeoman.dist %>/images'
+        }]
+    }
+}
+```
+##htmlmin
+```
+htmlmin: {
+    dist: {
+        options: {
+            //删除文档树中文本节点的空白。不会影响重大的空白， \
+            //比如在SCRIPT,STYLE,PRE或TEXTAREA等元素内容
+            collapseWhitespace: true,
+            //删除布尔属性 \
+            //<input disabled="disabled"> => <input disabled>
+            collapseBooleanAttributes: true,
+            //删除<script>和<style>标签内的HTML注释
+            removeCommentsFromCDATA: true,
+            //一些元素允许省略标签，像</td>
+            removeOptionalTags: true
+        },
+        files: [{
+            expand: true,
+            cwd: '<%= yeoman.dist %>',
+            src: ['*.html', 'views/{,*/}*.html'],
+            dest: '<%= yeoman.dist %>'
+        }]
+    }
+}
+```
+##files
 + `filter` src里的路径通过任意一个有效的 fs.Stats 函数名或者一个函数通过返回true和false决定是否匹配
 + `nonull` 当一个匹配没有找到时，返回包含这个模式的列表自身.当没有任何一个匹配时,返回一个空列表.结合grunt 的--verbore参数，这个选项可以帮助debug文件的路径问题.
 + `dot` 即使模式没有包含开始的`.`,dot匹配文件名时也会开始于`.`
