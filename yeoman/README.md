@@ -219,6 +219,30 @@ cssmin: {
     }
 }
 ```
+##rev
+```javascript
+rev: {
+    dist: {
+        files: {
+            src: [
+                '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+                '<%= yeoman.dist %>/scripts/{,*/}*.js',
+                '<%= yeoman.dist %>/styles/{,*/}*.css'
+            ]
+        }
+    }
+}
+```
+##usemin
+```javascript
+usemin: {
+    html: ['<%= yeoman.dist %>/{,*/}*.html', '<%= yeoman.dist %>/views/{,*/}*.html', ],
+    css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+    options: {
+        assetsDirs: ['<%= yeoman.dist %>']
+    }
+}
+```
 ##files
 + `filter` src里的路径通过任意一个有效的 fs.Stats 函数名或者一个函数通过返回true和false决定是否匹配
 + `nonull` 当一个匹配没有找到时，返回包含这个模式的列表自身.当没有任何一个匹配时,返回一个空列表.结合grunt 的--verbore参数，这个选项可以帮助debug文件的路径问题.
