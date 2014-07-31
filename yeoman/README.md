@@ -56,7 +56,7 @@ imagemin: {
 }
 ```
 ##htmlmin
-```
+```javascript
 htmlmin: {
     dist: {
         options: {
