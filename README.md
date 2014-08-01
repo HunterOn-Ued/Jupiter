@@ -5,5 +5,8 @@
 + [使用bower管理前端库依赖](https://github.com/HunterOn-Ued/Jupiter/tree/master/yeoman#%E4%BD%BF%E7%94%A8bower%E7%AE%A1%E7%90%86%E5%89%8D%E7%AB%AF%E5%BA%93%E4%BE%9D%E8%B5%96)
 + [Build](https://github.com/HunterOn-Ued/Jupiter/tree/master/yeoman#build)
 
+##js语法检查
++ [jshint](https://github.com/HunterOn-Ued/Jupiter/tree/master/jshint)
+
 ##gitignore
 + [gitignore](https://raw.githubusercontent.com/HunterOn-Ued/Jupiter/master/gitignore/.gitignore)
