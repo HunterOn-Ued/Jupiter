@@ -14,7 +14,6 @@ var actions = require('../acitons/log'),
                 position: req.query.position
             }
         };
-        console.log(logItem)
         actions.add(logItem);
         res.send({'success': true});
     };
