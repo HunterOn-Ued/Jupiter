@@ -7,16 +7,14 @@
         var msg = {},
             params = [];
 
-        msg.ua = window.navigator.userAgent;
         msg.message = errorMessage;
-        msg.script = scriptURI;
-        msg.postion = 'L:' + lineNumber + ',C:' + (columnNumber || '-');
-        msg.page = window.location.href;
+        msg.script = scriptURI.split('/').pop();
+        msg.position = 'L:' + lineNumber + ',C:' + (columnNumber || '-');
         msg.uid = uid;
         msg.product = product;
 
         for(var key in msg){
-            params.push(key = encodeURI(msg[key]));
+            params.push(key + '=' + encodeURIComponent(msg[key]));
         }
         params = params.join('&');
         logSender.src = 'http://f2eapi.hunteron.com/log/browser/error?' + params;
