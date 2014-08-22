@@ -1,0 +1,20 @@
+{
+  "name": "f2eApi",
+  "version": "0.0.1",
+  "description": "hunterOn f2e api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "hunteron",
+    "f2e"
+  ],
+  "author": "hunteron f2e",
+  "license": "ISC",
+  "dependencies": {
+    "express": "~4.8.5",
+    "mongoose": "~3.8.15"
+  }
+}
