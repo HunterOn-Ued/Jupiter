@@ -1,6 +1,5 @@
 var actions = require('../acitons/log'),
     routes = function(req, res){
-        console.log(req.get('Referer'))
         var logItem = {
             type: req.params.type,
             product: req.query.product,
