@@ -1,21 +1,23 @@
 var nodemailer = require('nodemailer'),
-    transporter = nodemailer.createTransport("SMTP",
-        host: 'mtp.exmail.qq.com',
-        secureConnection: true,
+    smtpTransport = require('nodemailer-smtp-transport'),
+    transporter = nodemailer.createTransport(smtpTransport({
+        host: 'smtp.exmail.qq.com',
+        secure: true,
         port: 465,
         auth: {
-            user: 'colin.li@hunteron.com',
-            pass: 'thisislaobai'
+            user: 'f2eapi@hunteron.com',
+            pass: 'f2e@2014'
         }
-    ),
+    })),
     config = {
         transporter: transporter,
         from: [
-            'f2eapi <colin.li@hunteron.com>'
+            'f2eapi <f2eapi@hunteron.com>'
         ],
-        sendTo: [
-            'product center <colin.li@hunteron.com>'
+        to: [
+            'productCenter <product@hunteron.com>',
+	    '大兵 <ryan.shi@hunteron.com>'
         ]
     };
 
-module.exports = transporter;
+module.exports = config;
