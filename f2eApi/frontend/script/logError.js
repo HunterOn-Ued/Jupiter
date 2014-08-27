@@ -17,7 +17,7 @@
             params.push(key + '=' + encodeURIComponent(msg[key]));
         }
         params = params.join('&');
-        logSender.src = 'http://f2eapi.hunteron.com/log/browser/error?' + params;
+        logSender.src = 'http://2eapi.hunteron.com/log/browser/error?' + params;
 
         //TODO remove later
         console.log(msg)

@@ -12,8 +12,12 @@ var actions = require('../acitons/log'),
                 message: req.query.message,
                 position: req.query.position
             }
-        };
-        actions.add(logItem);
+        },
+
+        subDomain = logItem.content.url.split('.')[0];
+        if(subDomain.length < 11){
+            actions.add(logItem);
+        }
         res.send({'success': true});
     };
 
