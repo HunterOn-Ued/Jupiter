@@ -29,11 +29,18 @@
             var handler = function(error){
                 var errorEvent = null;
                 if(useCustomEvent){
+                    //DOM4
                     errorEvent = new CustomEvent("logError", {detail: error});
                 }else{
-                  errorEvent = document.createEvent("Event");
-                  errorEvent.initEvent("logError", false, false);
-                  errorEvent.detail = error;
+                    //DOM4
+                    errorEvent = document.createEvent("Event");
+                    /*
+                     * @par1 eventType
+                     * @par2 canBubble
+                     * @par3 cancelable
+                     */
+                    errorEvent.initEvent("logError", false, false);
+                    errorEvent.detail = error;
                 }
                 window.dispatchEvent(errorEvent);
             }
