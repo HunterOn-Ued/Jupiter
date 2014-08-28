@@ -32,7 +32,7 @@
                     //DOM4
                     errorEvent = new CustomEvent("logError", {detail: error});
                 }else{
-                    //DOM4
+                    //DOM3
                     errorEvent = document.createEvent("Event");
                     /*
                      * @par1 eventType
@@ -42,6 +42,7 @@
                     errorEvent.initEvent("logError", false, false);
                     errorEvent.detail = error;
                 }
+                //fire event
                 window.dispatchEvent(errorEvent);
             }
 
