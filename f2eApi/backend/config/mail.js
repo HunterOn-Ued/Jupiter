@@ -15,7 +15,7 @@ var nodemailer = require('nodemailer'),
             'f2eapi <f2eapi@hunteron.com>'
         ],
         to: [
-            'productCenter <product@hunteron.com>',
+            'dev <dev@hunteron.com>',
 	    '大兵 <ryan.shi@hunteron.com>'
         ]
     };
