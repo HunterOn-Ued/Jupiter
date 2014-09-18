@@ -15,8 +15,18 @@ var nodemailer = require('nodemailer'),
             'f2eapi <f2eapi@hunteron.com>'
         ],
         to: [
-            'dev <dev@hunteron.com>',
-	    '大兵 <ryan.shi@hunteron.com>'
+            'xuanfei <xuanfei.liu@hunteron.com>',
+            'andy <andy.song@hunteron.com>',
+            'TODO <todo.zhao@hunteron.com>',
+            'jeff <jeff.liu@hunteron.com>',
+            'colin <colin.li@hunteron.com>',
+            'jason <jason.wu@hunteron.com>',
+            'mizi <mizi.lin@hunteron.com>',
+            'clish <clish.wang@hunteron.com>',
+            'dolf <dolf.zhang@hunteron.com>',
+            'rocca <rocca.peng@hunteron.com>',
+            '玛丽 <mark.li@hunteron.com>',
+	        '大兵 <ryan.shi@hunteron.com>'
         ]
     };
 
