@@ -1,13 +1,12 @@
 (function(undefined){
     var uid = 0,
-        product = 'notSet'
+        product = 'notSet',
         logSender = new Image(),
         sendError = function(msg){
             var params = [];
 
             msg.uid = uid;
             msg.product = product;
-
             for(var key in msg){
                 params.push(key + '=' + encodeURIComponent(msg[key]));
             }
@@ -59,7 +58,7 @@
         msg.message = e.detail.message;
         msg.script = e.detail.filename.split('/').pop();
         msg.position = 'L:' + e.detail.lineno + ',C:' + (e.detail.colno || '-');
-
+        msg.locationHash = window.location.hash;
         sendError(msg);
     }, false);
 

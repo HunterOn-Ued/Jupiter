@@ -7,7 +7,7 @@ var actions = require('../acitons/log'),
             content: {
                 domain: req.params.domain,
                 ua: req.get('User-Agent'),
-                url: req.get('Referer'),
+                url: req.get('Referer') + req.query.locationHash,
                 script: req.query.script,
                 message: req.query.message,
                 position: req.query.position
